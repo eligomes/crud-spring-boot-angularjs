@@ -1,0 +1,72 @@
+.jumbotron {
+	width: 850px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	font-size: 10px;
+}
+
+.menu {
+	width: 850px;
+	text-align: center;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	padding-top: 60px;
+	font-size: 17px;
+}
+
+.table, td {
+	font-size: 15px;
+	text-align: left;
+}
+
+.form-radio {
+	font-size: 15px;
+	text-align: left;
+}
+
+.form-control {
+	margin-bottom: 5px;
+}
+
+.selecionado {
+	background-color: yellow;
+}
+
+.fundo {
+	background-color: #6495ED;
+}
+
+.negrito {
+	font-weight: bold;
+}
+
+hr {
+	border-color: #999;
+}
+
+fieldset {
+	border: 1px solid #ddd !important;
+	margin: 0;
+	xmin-width: 0;
+	padding: 10px;
+	position: relative;
+	border-radius: 4px;
+	background-color: #f5f5f5;
+	padding-left: 10px !important;
+}
+
+legend {
+	margin-bottom: 0px;
+	width: 35%;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	background-color: #ffffff;
+}
+
+.alert-danger{
+	font-size: 16px;
+}

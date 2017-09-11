@@ -1,0 +1,32 @@
+<div class="jumbotron">
+	<form name="userForm">
+	  
+      	<input class="form-control" type="text" name="nome"  ng-model="user.nome" placeholder="Nome" ng-required="true" />
+		<input class="form-control" type="text" ng-model="user.email" name="email" placeholder="Email" ng-required="true" ng-pattern="/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/"/>
+		<input class="form-control" type="text" ng-model="user.telefone" name="telefone" placeholder="Telefone" ng-required="true" ui-phone/>
+		
+		<div class="form-radio">
+		    <label>Sexo:</label>
+			<input  type="radio"  ng-model="user.sexo" value="M" ng-required="true" />Masc.
+			<input  type="radio" ng-model="user.sexo" value="F" ng-required="true" />Fem.
+		</div>
+	</form>
+
+	<div ng-show="userForm.nome.$invalid && !userForm.nome.$pristine" class="alert alert-danger">
+	      Por favor, preencha o campo Nome!</p>
+	</div>
+	
+	<div ng-show="userForm.email.$error.required && userForm.email.$dirty" class="alert alert-danger">
+		 Por favor, preencha o campo Email!
+	</div>
+	<div ng-show="userForm.email.$error.pattern" class="alert alert-danger">
+		 Informe um e-mail válido!
+	</div>
+	
+	<div ng-show="userForm.telefone.$error.required && userForm.telefone.$dirty" class="alert alert-danger">
+		Por favor, preencha o campo telefone!
+	</div>
+	
+	<a href="#/user" class="btn btn-primary">Voltar</a>
+	<button class="btn btn-primary" ng-click="addUser(user)" ng-disabled="userForm.$invalid">Salvar</button>
+</div>

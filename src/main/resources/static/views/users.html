@@ -1,0 +1,24 @@
+<div class="jumbotron">
+	<input class="form-control" type="text" ng-model="criterioDeBusca" placeholder="Buscar usuario..."/>
+	<table class="table table-striped">
+		<tr>
+			<th>ID</th>
+			<th><a href="" ng-click="orderBy('nome')" title="Ordernar">Nome</a></th>
+			<th><a href="" ng-click="orderBy('email')" title="Ordernar">Email</a></th>
+			<th>Telefone</a></th>
+			<th>Sexo</a></th>
+			<th>Editar</a></th>
+			<th>Excluir</a></th>
+		</tr>
+		<tr ng-repeat="user in users | filter:criterioDeBusca | orderBy:criterioDeOrdenacao:direcaoDaOrdenacao"">
+			<td>{{user.id}}</td>
+			<td>{{user.nome}}</a></td>
+			<td>{{user.email}}</td>
+			<td>{{user.telefone}}</td>
+			<td>{{user.sexo}}</td>
+			<td><a href="#/user/{{user.id}}">Editar</a></td>
+			<td><a href="#" ng-click="deleteUser(user.id)">Excluir</a></td>
+		</tr>
+	</table>
+	<hr/>
+</div>
